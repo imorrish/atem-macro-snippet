@@ -2,9 +2,23 @@
 		"name": "atem-macro-snippet",
 		"displayName": "ATEM Macros",
 		"description": "Blackmagic ATEM Macro file snippets",
-		"version": "0.0.3",
-		"icon":"https://ianmorrish.files.wordpress.com/2019/10/atemmacroicon.png",
+		"version": "0.0.4",
+		"icon": "images/atemmacroicon.png",
 		"publisher": "imorrish",
+		"author": {
+			"name": "Ian Morrish",		
+			"email": "ian_morrish@hotmail.com"		
+		  },
+		"url": "https://github.com/imorrish/atem-macro-snippet",
+		"bugs": {
+				"url": "https://github.com/imorrish/atem-macro-snippet/issues"
+		},
+		"homepage": "https://github.com/imorrish/atem-macro-snippet/blob/master/README.md",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imorrish/atem-macro-snippet.git"
+  },
 		"engines": {
 				"vscode": "^1.28.0"
 		},
