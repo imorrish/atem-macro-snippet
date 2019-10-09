@@ -1,0 +1,349 @@
+{
+	"macroprofile": {
+		"scope": "xml",
+		"prefix": "ATEM - MacroProfile",
+		"body":	[
+		"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+		"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"ATEM Television Studio HD\">",
+			"<MixEffectBlocks>",
+				"<Keys/>",
+			"</MixEffectBlocks>",
+			"<MediaPlayers/>",
+			"<MacroPool>",
+				"<Macro index=\"0\" name=\"${1:name}\" description=\"${2:description}\">",
+				"</Macro>",
+			"</MacroPool>",
+			"<MacroControl loop=\"False\"/>",
+		"</profile>"
+		],
+		"description" : "Create a new xml file dedicated to a macro profile"
+},
+"macro": {
+	"scope": "xml",
+		"prefix": "ATEM - Macro",
+		"body":	[
+		"<Macro index=\"${1:id}\" name=\"${2:name}\" description=\"${3:description}\">",
+		"</Macro>"
+		],
+		"description" : "Insert a new ATEM Macro"
+},
+"MacroSleep": {
+	"scope": "xml",
+		"prefix": "ATEM - Macrosleep",
+		"body": "<Op id=\"MacroSleep\" frames=\"${1:frames}\"/>",
+		"description" : "Insert a sleep command"
+},
+"MacroUserWait": {
+	"scope": "xml",
+		"prefix": "ATEM - MacrosUserWait",
+		"body": "<Op id=\"MacroUserWait\"/>",
+		"description" : "Insert a user wait"
+},
+"PreviewInput": {
+	"scope": "xml",
+		"prefix": "ATEM ME Previewinput",
+		"body": "<Op id=\"PreviewInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\"/>",
+		"description" : "Select preview input"
+},
+"ProgramInput": {
+	"scope": "xml",
+		"prefix": "ATEM ME Programinput",
+		"body": "<Op id=\"ProgramInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\"/>",
+		"description" : "Select program input"
+},
+"Cuttransition": {
+	"scope": "xml",
+		"prefix": "ATEM ME Cuttransition",
+		"body": "<Op id=\"CutTransition\" mixEffectBlockIndex=\"${1:0}\"/>",
+		"description" : "Select program input"
+},
+"Autotransition": {
+		"prefix": "ATEM ME Autotransition",
+		"body": "<Op id=\"Autotransition\" mixEffectBlockIndex=\"${1:0}\"/>",
+		"description" : "Select program input"
+},
+"TransitionMixRate": {
+	"prefix": "ATEM ME TransitionMixRate",
+	"body": "<Op id=\"TransitionMixRate\" mixEffectBlockIndex=\"${1:0}\" rate=\"${2:25}\"/>",
+	"description" : "Select transition speed. 1:00 = 25fps"
+},
+"TransitionStyle": {
+	"prefix": "ATEM ME TransitionStyle",
+	"body": "<Op id=\"TransitionStyle\" mixEffectBlockIndex=\"${1:0}\" style=\"${2:Cut/Dip/Wipe/DVE}\"/>",
+	"description" : "Select transition type to Cut, Dip, Wipe, DVE"
+},
+"TransitionSource": {
+	"prefix": "ATEM ME TransitionSource",
+	"body": "<Op id=\"TransitionSource\" mixEffectBlockIndex=\"${1:0}\" style=\"${2:Background, Key1, Key2}\"/>",
+	"description" : "Select Transition Source type to any one or more of Background, Key1, Key2 (include comma + space between balues that should be on"
+},
+"DSKAll": {
+	"scope": "xml",
+"prefix": "ATEM DSK - All",
+"body": [
+		"<Op id=\"DownstreamKeyFillInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+		"<Op id=\"DownstreamKeyCutInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+		"<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"${1:0}\" enable=\"${2:True/False}\"/>",
+		"<Op id=\"DownstreamKeyMaskLeft\" keyIndex=\"${1:0}\" left=\"${2:-16}\"/>",
+		"<Op id=\"DownstreamKeyMaskTop\" keyIndex=\"${1:0}\" top=\"${2:-9}\"/>",
+		"<Op id=\"DownstreamKeyMaskRight\" keyIndex=\"${1:0}\" right=\"${2:16}\"/>",
+		"<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"${1:0}\" bottom=\"${2:9}\"/>",
+		"<Op id=\"DownstreamKeyPreMultiply\" keyIndex=\"${1:0}\" preMultiply=\"${2:True/False}\"/>",
+		"<Op id=\"DownstreamKeyClip\" keyIndex=\"${1:0}\" clip=\"${2:0.0}\"/>",
+		"<Op id=\"DownstreamKeyGain\" keyIndex=\"${1:0}\" gain=\"${2:0.0}\"/>",
+		"<Op id=\"DownstreamKeyRate\" keyIndex=\"${1:0}\" rate=\"${2:50}\"/>",
+		"<Op id=\"DownstreamKeyAuto\" keyIndex=\"${1:0}\"/>",
+		"<Op id=\"DownstreamKeyOnAir\" keyIndex=\"${1:0}\" onAir=\"${2:True/False}\"/>",
+		"<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>"
+],
+"description" : "All DSK properties inserted"
+},
+"DownstreamKeyFillInput": {
+	"scope": "xml",
+		"prefix": "ATEM DSK FillInput",
+		"body": "<Op id=\"DownstreamKeyFillInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+		"description" : "Set DSK input source"
+},	
+"DownstreamKeyCutInput": {
+	"scope": "xml",
+		"prefix": "ATEM DSK CutInput",
+		"body": "<Op id=\"DownstreamKeyCutInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+		"description" : "Set DSK cut source"
+},
+"DownstreamKeyMaskEnable": {
+	"scope": "xml",
+		"prefix": "ATEM DSK MaskEnable",
+		"body": "<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"${1:0}\" enable=\"${2:True/False}\"/>",
+		"description" : "Set DSK Mask enable"
+},
+"DownstreamKeyMaskLeft": {
+	"scope": "xml",
+		"prefix": "ATEM DSK MaskLeft",
+		"body": "<Op id=\"DownstreamKeyMaskLeft\" keyIndex=\"${1:0}\" left=\"${2:-16}\"/>",
+		"description" : "Set DSK Mask Left position"
+},
+"DownstreamKeyMaskTop": {
+	"scope": "xml",
+		"prefix": "ATEM DSK MaskTop",
+		"body": "<Op id=\"DownstreamKeyMaskTop\" keyIndex=\"${1:0}\" top=\"${2:-9}\"/>",
+		"description" : "Set DSK Mask Top position"
+},
+"DownstreamKeyMaskRight": {
+	"scope": "xml",
+		"prefix": "ATEM DSK MaskRight",
+		"body": "<Op id=\"DownstreamKeyMaskRight\" keyIndex=\"${1:0}\" right=\"${2:16}\"/>",
+		"description" : "Set DSK Mask Right position"
+},
+"DownstreamKeyMaskBottom": {
+	"scope": "xml",
+		"prefix": "ATEM DSK MaskBottom",
+		"body": "<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"${1:0}\" bottom=\"${2:9}\"/>",
+		"description" : "Set DSK Mask Bottom position"
+},
+"DownstreamKeyPreMultiply": {
+	"scope": "xml",
+		"prefix": "ATEM DSK PreMultiply",
+		"body": "<Op id=\"DownstreamKeyPreMultiply\" keyIndex=\"${1:0}\" preMultiply=\"${2:True/False}\"/>",
+		"description" : "Set DSK preMultiply"
+},	
+"DownstreamKeyClip": {
+	"scope": "xml",
+		"prefix": "ATEM DSK Clip",
+		"body": "<Op id=\"DownstreamKeyClip\" keyIndex=\"${1:0}\" clip=\"${2:0.0}\"/>",
+		"description" : "Set DSK Clip value 0.0-1.0"
+},
+"DownstreamKeyGain": {
+	"scope": "xml",
+		"prefix": "ATEM DSK Gain",
+		"body": "<Op id=\"DownstreamKeyGain\" keyIndex=\"${1:0}\" gain=\"${2:0.0}\"/>",
+		"description" : "Set DSK Gain value 0.0-1.0"
+},
+"DownstreamKeyRate": {
+	"scope": "xml",
+		"prefix": "ATEM DSK Rate",
+		"body": "<Op id=\"DownstreamKeyRate\" keyIndex=\"${1:0}\" rate=\"${2:50}\"/>",
+		"description" : "Set DSK Rate value fps"
+},		
+"DownstreamKeyAuto": {
+	"scope": "xml",
+		"prefix": "ATEM DSKAuto",
+		"body": "<Op id=\"DownstreamKeyAuto\" keyIndex=\"${1:0}\"/>",
+		"description" : "Set DSK Auto On-air"
+},
+"DownstreamKeyOnAir": {
+	"scope": "xml",
+		"prefix": "ATEM DSK OnAir",
+		"body": "<Op id=\"DownstreamKeyOnAir\" keyIndex=\"${1:0}\" onAir=\"${2:True/False}\"/>",
+		"description" : "Set DSK On-air"
+},
+"DownstreamKeyTie": {
+	"scope": "xml",
+		"prefix": "ATEM DSK Tie",
+		"body": "<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>",
+		"description" : "Set DSK Tie to next transition"
+},
+"KeyType": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyType",
+		"body": "<Op id=\"KeyType\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" type=\"${3:Luma/Chroma/Pattern}\"/>",
+		"description" : "Set USK Type"
+},	
+"KeyFillInput": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyFillInput",
+		"body": "<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1}\"/>",
+		"description" : "Set USK Fill Input"
+},
+"KeyCutInput": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyCutInput",
+		"body": "<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1Key}\"/>",
+		"description" : "Set USK Fill Input"
+},
+"ChromaKeyHue": {
+	"scope": "xml",
+		"prefix": "ATEM USK ChromaKeyHue",
+		"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" hue=\"${3:0}\"/>",
+		"description" : "Set USK Chroma Hue (0 to 360)"
+},
+"ChromaKeyGain": {
+	"scope": "xml",
+		"prefix": "ATEM USK ChromaKeyGain",
+		"body": "<Op id=\"ChromaKeyGain\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
+		"description" : "Set USK Chroma Gain (0 to 1)"
+},
+"ChromaKeyClip": {
+	"scope": "xml",
+		"prefix": "ATEM USK ChromaKeyClip",
+		"body": "<Op id=\"ChromaKeyClip\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
+		"description" : "Set USK Chroma Clip (0 to 1)"
+},
+"ChromaKeyLift": {
+	"scope": "xml",
+		"prefix": "ATEM USK ChromaKeyLift",
+		"body": "<Op id=\"ChromaKeyLift\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" lift=\"${3:0}\"/>",
+		"description" : "Set USK Chroma Lift (0 to 1)"
+},
+"LumaKeyPreMultiply": {
+	"scope": "xml",
+		"prefix": "ATEM USK LumaKeyPreMultiply",
+		"body": "<Op id=\"LumaKeyPreMultiply\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" LumaKeyPreMultiply=\"${3:True/False}\"/>",
+		"description" : "Set USK Luma Key Pre-multiplied?"
+},
+"LumaKeyGain": {
+	"scope": "xml",
+		"prefix": "ATEM USK LumaKeyGain",
+		"body": "<Op id=\"LumaKeyGain\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
+		"description" : "Set USK Luma key gain (0 to 1)"
+},
+"LumaKeyClip": {
+	"scope": "xml",
+		"prefix": "ATEM USK LumaKeyClip",
+		"body": "<Op id=\"LumaKeyClip\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
+		"description" : "Set USK Luma Key Clip (0 to 1)"
+},
+"LumaKeyInvert": {
+	"scope": "xml",
+		"prefix": "ATEM USK LumaKeyInvert",
+		"body": "<Op id=\"LumaKeyInvert\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" invert=\"${3:True/False}\"/>",
+		"description" : "Set USK Luma Key Invert?"
+},
+"PatternKeyPattern": {
+	"scope": "xml",
+		"prefix": "ATEM USK PatternKeyPattern",
+		"body": "<Op id=\"PatternKeyPattern\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" pattern=\"${2:TopLeftDiagonal}\"/>",
+		"description" : "Set USK Pattern Key Pattern "
+},
+"PatternKeySize": {
+	"scope": "xml",
+		"prefix": "ATEM USK PatternKeySize",
+		"body": "<Op id=\"PatternKeySize\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" size=\"${2:0}\"/>",
+		"description" : "Set USK Pattern Key Size (0 to 1)"
+},
+"PatternKeySymmetry": {
+	"scope": "xml",
+		"prefix": "ATEM USK PatternKeySymmetry",
+		"body": "<Op id=\"PatternKeySymmetry\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" symmetry=\"${2:0}\"/>",
+		"description" : "Set USK Pattern Key Symmetry (0 to 1)"
+},
+"KeyMaskEnable": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyMaskEnable",
+		"body": "<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" enable=\"${2:True/False}\"/>",
+		"description" : "Set USK Mask enable"
+},
+"KeyMaskLeft": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyMaskLeft",
+		"body": "<Op id=\"KeyMaskLeft\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" left=\"${2:-16}\"/>",
+		"description" : "Set USK Mask Left (-16 to 16)"
+},
+"KeyMaskTop": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyMaskTop",
+		"body": "<Op id=\"KeyMaskTop\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" top=\"${2:9}\"/>",
+		"description" : "Set USK Mask Top (9 to -9)"
+},
+"KeyMaskRight": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyMaskRight",
+		"body": "<Op id=\"KeyMaskRight\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" right=\"${2:16}\"/>",
+		"description" : "Set USK Mask Right (16 to -16)"
+},
+"KeyMaskBottom": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyMaskBottom",
+		"body": "<Op id=\"KeyMaskBottom\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" bottom=\"${2:-9}\"/>",
+		"description" : "Set USK Mask Bottom (-9 to 9)"
+},
+"TransitionSource": {
+	"scope": "xml",
+		"prefix": "ATEM USK TransitionSource",
+		"body": "<Op id=\"TransitionSource\" mixEffectBlockIndex=\"${1:0}\" source=\"${2:Background, Key1, Key2}\"/>",
+		"description" : "Set USK transition Source (any combination of vales including no values)"
+},
+"KeyOnAir": {
+	"scope": "xml",
+		"prefix": "ATEM USK KeyOnAir",
+		"body": "<Op id=\"KeyOnAir\" mixEffectBlockIndex=\"${1:0}\"  keyIndex=\"${2:0}\" onAir=\"${3:True/False}\"/>",
+		"description" : "Set USK on-Air"
+},
+"HyperDeckSetSingleClip": {
+	"scope": "xml",
+		"prefix": "ATEM HyperDeckSetSingleClip",
+		"body": "<Op id=\"HyperDeckSetSingleClip\" hyperDeckIndex=\"${1:0}\" singleClipEnabled=\"${2:True/False}\"/>",
+		"description" : "Set Hyperdeck to playback single clip only"
+},
+"HyperDeckSetSpeed": {
+	"scope": "xml",
+		"prefix": "ATEM HyperDeckSetSpeed",
+		"body": "<Op id=\"HyperDeckSetSpeed\" hyperDeckIndex=\"${1:0}\" speedPercent=\"${2:1}\"/>",
+		"description" : "Set HyperDeck playback speed in percentage. E.g. 0.5 = 50%"
+},
+"HyperDeckPlay": {
+	"scope": "xml",
+		"prefix": "ATEM HyperDeckPlay",
+		"body": "<Op id=\"HyperDeckPlay\" hyperDeckIndex=\"${1:0}\"/>",
+		"description" : "Start playing HyperDeck"
+},
+"HyperDeckStop": {
+	"scope": "xml",
+		"prefix": "ATEM HyperDeckPlay",
+		"body": "<Op id=\"HyperDeckStop\" hyperDeckIndex=\"${1:0}\"/>",
+		"description" : "Start playing HyperDeck"
+},
+"HyperDeckAll": {
+	"scope": "xml",
+		"prefix": "ATEM HyperDeckAll",
+		"body": [
+		"<Op id=\"HyperDeckSetSingleClip\" hyperDeckIndex=\"${1:0}\" singleClipEnabled=\"${2:True/False}\"/>",
+		"<Op id=\"HyperDeckSetSourceClipIndex\" hyperDeckIndex=\"${1:0}\" clipIndex=\"${2:ClipIndex}\"/>",
+		"<Op id=\"HyperDeckGoToPosition\" hyperDeckIndex=\"${1:0}\" hour=\"${2:hour}\" minute=\"${3:minute}\" second=\"${4:second}\" frame=\"${4:frame}\"/>",
+		"<Op id=\"HyperDeckSetLoop\" hyperDeckIndex=\"${1:0}\" loopEnabled=\"True/False\"/>",
+		"<Op id=\"HyperDeckSetSpeed\" hyperDeckIndex=\"${1:0}\" speedPercent=\"${2:1}\"/>",
+		"<Op id=\"HyperDeckPlay\" hyperDeckIndex=\"${1:0}\"/>",
+		"<Op id=\"HyperDeckStop\" hyperDeckIndex=\"${1:0}\"/>"
+		],
+		"description" : "Inset all HyperDeck operations"
+}
+}

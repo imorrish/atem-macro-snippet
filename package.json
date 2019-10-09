@@ -1,0 +1,22 @@
+{
+		"name": "atem-macro-snippet",
+		"displayName": "ATEM Macros",
+		"description": "Blackmagic ATEM Macro file snippets",
+		"version": "0.0.3",
+		"icon":"https://ianmorrish.files.wordpress.com/2019/10/atemmacroicon.png",
+		"publisher": "imorrish",
+		"engines": {
+				"vscode": "^1.28.0"
+		},
+		"categories": [
+				"Snippets"
+		],
+		"contributes": {
+				"snippets": [
+						{
+								"language": "xml",
+								"path": "./snippets.json"
+						}
+				]
+		}
+}
