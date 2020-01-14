@@ -2,6 +2,9 @@
 
 This is the snippet add-in for VS Code to create or edit macros in the ATEM XML import/export format
 
+# Demo
+![ATEM Macro snippets](images/screenannimation.gif)
+
 ## Usnig the snippts
 
 - Export an ATEM configuration from the ATEM software control
