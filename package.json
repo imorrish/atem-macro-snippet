@@ -2,7 +2,7 @@
 		"name": "atem-macro-snippet",
 		"displayName": "ATEM Macros",
 		"description": "Blackmagic ATEM Macro file snippets",
-		"version": "0.0.4",
+		"version": "0.0.5",
 		"icon": "images/ATEMmacroIcon.png",
 		"publisher": "imorrish",
 		"author": {
