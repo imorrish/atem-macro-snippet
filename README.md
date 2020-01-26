@@ -5,6 +5,9 @@ This is the snippet add-in for VS Code to create or edit macros in the ATEM XML 
 # Demo
 ![ATEM Macro snippets](images/screenannimation.gif)
 
+## Change Log
+v0.0.6 - added ATEM Constellation as a product choice.
+
 ## Usnig the snippts
 
 - Export an ATEM configuration from the ATEM software control

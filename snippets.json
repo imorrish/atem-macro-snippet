@@ -4,7 +4,7 @@
 		"prefix": "ATEM - MacroProfile",
 		"body":	[
 		"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
-		"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"${1|ATEM Television Studio HD,ATEM Mini,ATEM 1 M/E Production Studio 4K,ATEM 4 M/E Broadcast Studio 4K,ATEM Television Studio }\">",
+		"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"${1|ATEM Television Studio HD,ATEM Mini,ATEM 1 M/E Production Studio 4K,ATEM 4 M/E Broadcast Studio 4K,ATEM Television Studio,ATEM Constellation 8K (4K Mode) }\">",
 			"<MixEffectBlocks>",
 				"<Keys/>",
 			"</MixEffectBlocks>",
