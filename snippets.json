@@ -55,12 +55,12 @@
 	"scope": "xml",
 		"prefix": "ATEM ME Cuttransition",
 		"body": "<Op id=\"CutTransition\" mixEffectBlockIndex=\"${1:0}\"/>",
-		"description" : "Select program input"
+		"description" : "Cut program input"
 },
 "Autotransition": {
 		"prefix": "ATEM ME Autotransition",
-		"body": "<Op id=\"Autotransition\" mixEffectBlockIndex=\"${1:0}\"/>",
-		"description" : "Select program input"
+		"body": "<Op id=\"AutoTransition\" mixEffectBlockIndex=\"${1:0}\"/>",
+		"description" : "Autotransition program input"
 },
 "TransitionMixRate": {
 	"prefix": "ATEM ME TransitionMixRate",
