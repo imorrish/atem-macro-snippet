@@ -4,7 +4,7 @@
 		"prefix": "ATEM - MacroProfile",
 		"body":	[
 		"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
-		"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"${1|ATEM Television Studio HD,ATEM Mini,ATEM 1 M/E Production Studio 4K,ATEM 4 M/E Broadcast Studio 4K,ATEM Television Studio,ATEM Constellation 8K (4K Mode) }\">",
+		"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"${1|ATEM Television Studio HD,ATEM Mini, ATEM Mini Pro, ATEM Mini Pro ISO, ATEM Mini Extreme,ATEM 1 M/E Production Studio 4K,ATEM 4 M/E Broadcast Studio 4K,ATEM Television Studio,ATEM Constellation 8K (4K Mode) }\">",
 			"<MixEffectBlocks>",
 				"<Keys/>",
 			"</MixEffectBlocks>",
@@ -140,6 +140,17 @@
 		"body": "<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"${1:0}\" bottom=\"${2:9}\"/>",
 		"description" : "Set DSK Mask Bottom position"
 },
+"DownstreamKeyMaskAll": {
+	"scope": "xml",
+	"prefix": "ATEM DSK Mask All",
+	"body":[
+		"<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"${1|0,1|}\" enable=\"${2|True,False|}\"/>",
+		"<Op id=\"DownstreamKeyMaskTop\" keyIndex=\"$1\" top=\"${3:9}\"/>",
+		"<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"$1\" bottom=\"${4:-9}\"/>",
+		"<Op id=\"DownstreamKeyMaskLeft\" keyIndex=\"$1\" left=\"${5:-16}\"/>",
+		"<Op id=\"DownstreamKeyMaskRight\" keyIndex=\"$1\" right=\"${6:16}\"/>"
+		]
+},
 "DownstreamKeyPreMultiply": {
 	"scope": "xml",
 		"prefix": "ATEM DSK PreMultiply",
@@ -185,116 +196,127 @@
 "KeyType": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyType",
-		"body": "<Op id=\"KeyType\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" type=\"${3:Luma/Chroma/Pattern}\"/>",
+		"body": "<Op id=\"KeyType\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" type=\"${3:Luma/Chroma/Pattern}\"/>",
 		"description" : "Set USK Type"
 },	
 "KeyFillInput": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyFillInput",
-		"body": "<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1}\"/>",
+		"body": "<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1}\"/>",
 		"description" : "Set USK Fill Input"
 },
 "KeyCutInput": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyCutInput",
-		"body": "<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1Key}\"/>",
+		"body": "<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1Key}\"/>",
 		"description" : "Set USK Fill Input"
 },
 "ChromaKeyHue": {
 	"scope": "xml",
 		"prefix": "ATEM USK ChromaKeyHue",
-		"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" hue=\"${3:0}\"/>",
+		"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" hue=\"${3:0}\"/>",
 		"description" : "Set USK Chroma Hue (0 to 360)"
 },
 "ChromaKeyGain": {
 	"scope": "xml",
 		"prefix": "ATEM USK ChromaKeyGain",
-		"body": "<Op id=\"ChromaKeyGain\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
+		"body": "<Op id=\"ChromaKeyGain\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
 		"description" : "Set USK Chroma Gain (0 to 1)"
 },
 "ChromaKeyClip": {
 	"scope": "xml",
 		"prefix": "ATEM USK ChromaKeyClip",
-		"body": "<Op id=\"ChromaKeyClip\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
+		"body": "<Op id=\"ChromaKeyClip\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
 		"description" : "Set USK Chroma Clip (0 to 1)"
 },
 "ChromaKeyLift": {
 	"scope": "xml",
 		"prefix": "ATEM USK ChromaKeyLift",
-		"body": "<Op id=\"ChromaKeyLift\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" lift=\"${3:0}\"/>",
+		"body": "<Op id=\"ChromaKeyLift\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" lift=\"${3:0}\"/>",
 		"description" : "Set USK Chroma Lift (0 to 1)"
 },
 "LumaKeyPreMultiply": {
 	"scope": "xml",
 		"prefix": "ATEM USK LumaKeyPreMultiply",
-		"body": "<Op id=\"LumaKeyPreMultiply\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" LumaKeyPreMultiply=\"${3:True/False}\"/>",
+		"body": "<Op id=\"LumaKeyPreMultiply\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" LumaKeyPreMultiply=\"${3:True/False}\"/>",
 		"description" : "Set USK Luma Key Pre-multiplied?"
 },
 "LumaKeyGain": {
 	"scope": "xml",
 		"prefix": "ATEM USK LumaKeyGain",
-		"body": "<Op id=\"LumaKeyGain\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
+		"body": "<Op id=\"LumaKeyGain\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
 		"description" : "Set USK Luma key gain (0 to 1)"
 },
 "LumaKeyClip": {
 	"scope": "xml",
 		"prefix": "ATEM USK LumaKeyClip",
-		"body": "<Op id=\"LumaKeyClip\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
+		"body": "<Op id=\"LumaKeyClip\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
 		"description" : "Set USK Luma Key Clip (0 to 1)"
 },
 "LumaKeyInvert": {
 	"scope": "xml",
 		"prefix": "ATEM USK LumaKeyInvert",
-		"body": "<Op id=\"LumaKeyInvert\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" invert=\"${3:True/False}\"/>",
+		"body": "<Op id=\"LumaKeyInvert\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" invert=\"${3:True/False}\"/>",
 		"description" : "Set USK Luma Key Invert?"
 },
 "PatternKeyPattern": {
 	"scope": "xml",
 		"prefix": "ATEM USK PatternKeyPattern",
-		"body": "<Op id=\"PatternKeyPattern\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" pattern=\"${2:TopLeftDiagonal}\"/>",
+		"body": "<Op id=\"PatternKeyPattern\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" pattern=\"${2:TopLeftDiagonal}\"/>",
 		"description" : "Set USK Pattern Key Pattern "
 },
 "PatternKeySize": {
 	"scope": "xml",
 		"prefix": "ATEM USK PatternKeySize",
-		"body": "<Op id=\"PatternKeySize\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" size=\"${2:0}\"/>",
+		"body": "<Op id=\"PatternKeySize\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" size=\"${2:0}\"/>",
 		"description" : "Set USK Pattern Key Size (0 to 1)"
 },
 "PatternKeySymmetry": {
 	"scope": "xml",
 		"prefix": "ATEM USK PatternKeySymmetry",
-		"body": "<Op id=\"PatternKeySymmetry\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" symmetry=\"${2:0}\"/>",
+		"body": "<Op id=\"PatternKeySymmetry\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" symmetry=\"${2:0}\"/>",
 		"description" : "Set USK Pattern Key Symmetry (0 to 1)"
 },
 "KeyMaskEnable": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyMaskEnable",
-		"body": "<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" enable=\"${2:True/False}\"/>",
+		"body": "<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" enable=\"${2:True/False}\"/>",
 		"description" : "Set USK Mask enable"
 },
 "KeyMaskLeft": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyMaskLeft",
-		"body": "<Op id=\"KeyMaskLeft\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" left=\"${2:-16}\"/>",
+		"body": "<Op id=\"KeyMaskLeft\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" left=\"${2:-16}\"/>",
 		"description" : "Set USK Mask Left (-16 to 16)"
 },
 "KeyMaskTop": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyMaskTop",
-		"body": "<Op id=\"KeyMaskTop\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" top=\"${2:9}\"/>",
+		"body": "<Op id=\"KeyMaskTop\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" top=\"${2:9}\"/>",
 		"description" : "Set USK Mask Top (9 to -9)"
 },
 "KeyMaskRight": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyMaskRight",
-		"body": "<Op id=\"KeyMaskRight\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" right=\"${2:16}\"/>",
+		"body": "<Op id=\"KeyMaskRight\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" right=\"${2:16}\"/>",
 		"description" : "Set USK Mask Right (16 to -16)"
 },
 "KeyMaskBottom": {
 	"scope": "xml",
 		"prefix": "ATEM USK KeyMaskBottom",
-		"body": "<Op id=\"KeyMaskBottom\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" bottom=\"${2:-9}\"/>",
+		"body": "<Op id=\"KeyMaskBottom\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" bottom=\"${2:-9}\"/>",
 		"description" : "Set USK Mask Bottom (-9 to 9)"
+},
+	"KeyMaskAll": {
+	"scope": "xml",
+	"prefix": "ATEM USK Mask All",
+	"body":[
+			"<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
+			"<Op id=\"KeyMaskTop\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" top=\"${4:9\"/>",
+			"<Op id=\"KeyMaskBottom\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" bottom=\"${5:-9}\"/>",
+			"<Op id=\"KeyMaskLeft\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" left=\"${6:-16}\"/>",
+			"<Op id=\"KeyMaskRight\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" right=\"${7:16}\"/>"
+		]
 },
 "TransitionSource": {
 	"scope": "xml",
